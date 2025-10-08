@@ -59,4 +59,9 @@ console.log(+min) /* преобразование типа string в number, р�
 console.log(Number(isgreated)) /* преобразование типа boolean в number со значением 1, т.к. значением boolean является true */
 
 const answer = 0
-console.log(Boolean(answer)) /* преобразование типа number в boolean со значением 0, т.к. значением number является 0 */
+console.log(Boolean(answer)) /* преобразование типа number в boolean со значением false, т.к. значением number является 0 */
+
+const userID = 'Genrih5'
+console.log(Boolean(userID)) /* преобразование типа string в boolean со значением true, т.к. значение string не пустое, т.е. отлично от 0, пустой строки, null, undefined и NaN */
+
+console.log(Number(definition)) /* преобразование типа undefined в Number, всегда становится NaN */
