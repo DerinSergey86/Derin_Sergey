@@ -40,15 +40,23 @@ console.log(typeof(infinity));
 
 // явное преобразование типов данных
 
-infinity = String(infinity) /* преобразование типа из number в string */
+infinity = String(infinity) /* преобразование типа number в string */
 console.log(typeof (infinity));
 
 let value = 'five'
-value = Number(value) /* преобразование типа из string в number */
+value = Number(value) /* преобразование типа string в number */
 console.log(typeof(value))
 
 let compare = true
-compare = String(compare) /* преобразование типа из boolean в string */
+compare = String(compare) /* преобразование типа boolean в string */
 console.log(typeof(compare))
 
 // неявное преобразование типов данных
+
+const min = '1'
+console.log(+min) /* преобразование типа string в number, рядо с переменной стоит знак математической операции */
+
+console.log(Number(isgreated)) /* преобразование типа boolean в number со значением 1, т.к. значением boolean является true */
+
+const answer = 0
+console.log(Boolean(answer)) /* преобразование типа number в boolean со значением 0, т.к. значением number является 0 */
