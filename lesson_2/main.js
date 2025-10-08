@@ -54,7 +54,7 @@ console.log(typeof(compare))
 // неявное преобразование типов данных
 
 const min = '1'
-console.log(+min) /* преобразование типа string в number, рядо с переменной стоит знак математической операции */
+console.log(3/min) /* преобразование типа string в number, рядом с переменной стоит знак математической операции */
 
 console.log(Number(isgreated)) /* преобразование типа boolean в number со значением 1, т.к. значением boolean является true */
 
@@ -65,3 +65,11 @@ const userID = 'Genrih5'
 console.log(Boolean(userID)) /* преобразование типа string в boolean со значением true, т.к. значение string не пустое, т.е. отлично от 0, пустой строки, null, undefined и NaN */
 
 console.log(Number(definition)) /* преобразование типа undefined в Number, всегда становится NaN */
+
+// операторы сравнения
+
+console.log('tasker'>'task') /* true, в первом значении больше букв (элементов значения) */
+console.log('Tasker'>'task') /* false, при сравнении первых символов, строчные буквы всегда больше заглавных */
+console.log(false===0) /* false, при строгом сравнении сначала сравниваются типы данных */
+console.log(false==0) /* true, при сравнении типы данных приводятся к number */
+console.log('somfingValue'===0) /* false, сравниваются разные типы данных */
