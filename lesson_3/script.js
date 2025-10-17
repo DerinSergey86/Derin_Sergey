@@ -157,3 +157,36 @@ for ( let X = 0; Ncars>Mcars; X++) {
     console.log (`На ${X}-й день количество машин стало меньше ${Mcars}`)
     }
 }
+
+// Поиск годов (for + логика)
+// Найди:
+// 1. Год первого полёта человека в космос (1961).
+let YuriGagarin = 0
+for (; YuriGagarin = 1961; YuriGagarin++) {
+    console.log(YuriGagarin);
+    break;
+}
+
+// 2. Количество високосных лет между 1800 и 2020 годами.
+// Используй цикл for и счётчик итераций.
+
+let MaxYearsLimit = 2020;
+let MinYearsLimit = 1800;
+let range = MaxYearsLimit - MinYearsLimit;
+let leapYears = 0;
+for (range; range > 0; range--) {
+  if (range % 4 == 0) continue;
+    leapYears++;
+}
+console.log(leapYears);
+// выводит странное число???
+
+// let MaxYearsLimit = 2020;
+// let MinYearsLimit = 1800;
+// let range = MaxYearsLimit - MinYearsLimit;
+// let leapYears = 0;
+// for (range; range < 0; range-4) {
+//     leapYears++;
+// }
+// console.log(leapYears);
+// выводит 0
