@@ -151,7 +151,7 @@ switch (role) {
 // "На X-й день количество машин стало меньше M"
 let Ncars = prompt ('Количество автомобилей в наличии', '')
 let Mcars = prompt ('Минимально допустимое количество автомобилей в наличии', '')
-for ( let X = 0; Ncars>M; X++) {
+for ( let X = 0; Ncars>Mcars; X++) {
     Ncars=Ncars/2
     if (Ncars<Mcars) {
     console.log (`На ${X}-й день количество машин стало меньше ${Mcars}`)
