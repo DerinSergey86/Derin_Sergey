@@ -95,3 +95,65 @@ let firstCompare = a < b ? b : a
 let secondCompare = b < c ? c : b
 let thirdCompare = firstCompare < secondCompare ? secondCompare : firstCompare
 console.log(thirdCompare);
+
+// Система рекомендаций по погоде
+let temperature = prompt ('Укажите температуру в градусах Цельсия','');
+if (temperature < -30) {
+        alert ('Оставайтесь дома!');
+} else if (temperature <= -10) {
+    alert ('Сегодня холодно');
+} else if (temperature <= 5) {
+    alert ('Не холодно');
+} else if (temperature <= 15) {
+    alert ('Тепло');
+} else if (temperature <= 25) {
+    alert ('Очень тепло');
+} else if (temperature <= 35) {
+    alert ('Жарко');
+} else if (temperature > 35) {
+    alert ('Пекло!');
+}
+
+// Роль пользователя  (switch)
+// Пусть есть переменная role , принимающая одно из значений:
+// "admin" , "manager" , "user" , "guest" .
+// С помощью switch выведи персонализированное сообщение, например:
+// admin → "Добро пожаловать, администратор!"
+// manager → "Привет, менеджер!"
+// user → "Рады видеть вас снова!"
+// guest → "Пожалуйста, войдите в систему"
+let role = prompt ('Пожалуйста, войдите в систему', '')
+switch (role) {
+    case 'admin':
+    alert ('Добро пожаловать, администратор!');
+    break
+
+    case 'manager':
+    alert ('Привет, менеджер!');
+    break
+
+    case 'user':
+    alert ('Привет, юзер!');
+    break
+
+    case 'guest':
+    alert ('Рады видеть вас снова!');
+    break
+    default:
+    alert( 'Что-то пошло не так. Попробуйте ещё раз.' );
+}
+
+// Подсчёт дней до окончания
+// В автосалоне есть N автомобилей. Каждый день количество машин уменьшается в 2
+// раза.
+// Определи, на какой день количество автомобилей станет меньше M .
+// Выведи результат в виде:
+// "На X-й день количество машин стало меньше M"
+let Ncars = prompt ('Количество автомобилей в наличии', '')
+let Mcars = prompt ('Минимально допустимое количество автомобилей в наличии', '')
+for ( let X = 0; Ncars>M; X++) {
+    Ncars=Ncars/2
+    if (Ncars<Mcars) {
+    console.log (`На ${X}-й день количество машин стало меньше ${Mcars}`)
+    }
+}
