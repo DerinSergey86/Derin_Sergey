@@ -175,18 +175,7 @@ let MinYearsLimit = 1800;
 let range = MaxYearsLimit - MinYearsLimit;
 let leapYears = 0;
 for (range; range > 0; range--) {
-  if (range % 4 == 0) continue;
+  if (range % 4 !== 0) continue;
     leapYears++;
 }
 console.log(leapYears);
-// выводит странное число???
-
-// let MaxYearsLimit = 2020;
-// let MinYearsLimit = 1800;
-// let range = MaxYearsLimit - MinYearsLimit;
-// let leapYears = 0;
-// for (range; range < 0; range-4) {
-//     leapYears++;
-// }
-// console.log(leapYears);
-// выводит 0
