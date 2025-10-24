@@ -126,3 +126,46 @@ function countdown(from) {
     }
 }
 countdown(5);
+
+// 11. Числа Фибоначчи
+// Функция fibonacci(n) возвращает n -е число Фибоначчи.
+
+function fibonacci(n) {
+    // let result = (n-1) + (n-2); выводит числа не из ряда
+    // return result; 
+    /* let result = fibonacci(n-1) + fibonacci(n-2); */ /* ??? превышен максимальный размер стека вызова */
+   /*  return result; */
+    // вариант через цикл for с жёстким присваиванием начальных значений, подсчётом значений через формулу, и соответствующим значению количеством итераций
+    // n = 0 + 1; n = 1 + 1; n = 1 + 2; n = 2 + 3 и т.д.
+        let fibonacci1 = 0;
+        let fibonacci2 = 1;
+        let fibonaccin;
+    for (let i = 1; i < n; i++) {
+        fibonaccin = fibonacci1 +fibonacci2;
+        fibonacci1 = fibonacci2;
+        fibonacci2 = fibonaccin;
+    }
+    return fibonaccin;
+}
+console.log(fibonacci(6));
+
+// 12. Реверс числа
+// Функция reverseNumber(num) возвращает число в обратном порядке цифр.
+// задать результат,
+//  взять остаток деления числа на 10,
+//  прибавить его к результату,
+//  перед последующей итерацией умножить остаток на 10, чтобы вернуть число к прежнему порядку
+//  в шаге округлить число вниз до целого
+// повторять пока число является натуральным
+
+function reverseNumber(num) {
+    let result = 0;
+ while (num > 0) {
+    result = result * 10;
+    result = result + num % 10;
+    num = num/10;
+    num = Math.floor(num);
+ }
+    return result;
+}
+console.log(reverseNumber(321));
