@@ -28,3 +28,10 @@ function compareElement (str,n) {
 }
 console.log(compareElement('jsfun', 2));
 console.log(compareElement('JSPAIN', 2));
+
+// Реализовать функцию которая заменяет в строке str, все вхождения подстроки find, на подстроку replace.
+
+function changeString (str, find, replace) {
+    return str.replace (find, replace);
+}
+console.log(changeString('Go to change world!', 'change world','sleep'));
